@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Nombre del Libro 1 - Mi Librería Online</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/book-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-book"></i> Mi Librería</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="#">Categorías</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">Inicio</a> / 
+            <a href="#">Ficción</a> / 
+            <span>El Nombre del Libro 1</span>
+        </div>
+
+        <section class="book-detail">
+            <div class="book-gallery">
+                <div class="main-image">
+                    <img src="../assets/img/portadas/libro1.jpg" alt="Portada del Libro 1" id="main-book-image">
+                </div>
+                <div class="thumbnails">
+                    <img src="../assets/img/portadas/libro1.jpg" alt="Portada frontal" class="active" onclick="changeImage(this.src)">
+                    <img src="../assets/img/portadas/libro1-back.jpg" alt="Contraportada" onclick="changeImage(this.src)">
+                    <img src="../assets/img/portadas/libro1-side.jpg" alt="Vista lateral" onclick="changeImage(this.src)">
+                    <img src="../assets/img/portadas/libro1-open.jpg" alt="Libro abierto" onclick="changeImage(this.src)">
+                </div>
+            </div>
+
+            <div class="book-info-detailed">
+                <div class="book-header">
+                    <h1>El Nombre del Libro 1</h1>
+                    <p class="author">Por <a href="#">Autor del Libro 1</a></p>
+                    <div class="rating-container">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-count">4.5 (128 reseñas)</span>
+                    </div>
+                </div>
+
+                <div class="book-price">
+                    <span class="price">$19.99</span>
+                    <span class="original-price">$24.99</span>
+                    <span class="discount">20% de descuento</span>
+                </div>
+
+                <div class="availability">
+                    <i class="fas fa-check-circle"></i> En stock - Disponible para envío inmediato
+                </div>
+
+                <div class="book-actions">
+                    <div class="quantity">
+                        <button class="quantity-btn" onclick="decrementQuantity()">-</button>
+                        <input type="number" value="1" min="1" id="quantity-input">
+                        <button class="quantity-btn" onclick="incrementQuantity()">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i> Añadir al carrito
+                    </button>
+                    <button class="wishlist-btn">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="book-details">
+                    <div class="detail-item">
+                        <span class="detail-label">ISBN:</span>
+                        <span class="detail-value">978-3-16-148410-0</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Editorial:</span>
+                        <span class="detail-value">Editorial Ejemplo</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Fecha de publicación:</span>
+                        <span class="detail-value">15 de enero de 2023</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Páginas:</span>
+                        <span class="detail-value">324</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Idioma:</span>
+                        <span class="detail-value">Español</span>
+                    </div>
+                </div>
+
+                <div class="categories-tags">
+                    <span class="tag">Ficción</span>
+                    <span class="tag">Contemporáneo</span>
+                    <span class="tag">Aventura</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="book-description">
+            <h2>Descripción</h2>
+            <div class="description-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus lacus vel nisi convallis, eget venenatis sem interdum. Vivamus efficitur justo vitae dignissim tincidunt. Nulla facilisi. Maecenas aliquet, nulla at pharetra vulputate, nisl velit efficitur nisl, vel volutpat odio sapien a magna.</p>
+                
+                <p>Praesent eu metus vel elit facilisis volutpat. Cras bibendum ultrices ante, at dictum nulla convallis quis. Sed tincidunt nulla at neque efficitur, sit amet volutpat magna porta. Quisque sed venenatis urna, nec tristique lacus. Nulla facilisis risus vitae lectus eleifend congue.</p>
+                
+                <p>Fusce bibendum dignissim eros, ut molestie erat congue a. Nulla facilisi. Curabitur quis libero nisi. Aenean ut mi in elit iaculis posuere. Donec venenatis pharetra eros, non malesuada enim sagittis a.</p>
+            </div>
+        </section>
+
+        <section class="author-info">
+            <h2>Sobre el Autor</h2>
+            <div class="author-content">
+                <div class="author-image">
+                    <img src="../assets/img/authors/autor1.jpg" alt="Autor del Libro 1">
+                </div>
+                <div class="author-bio">
+                    <h3>Autor del Libro 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis lobortis nibh, vitae tempor nisl pretium non. Cras vitae metus non felis faucibus venenatis. Vivamus at venenatis turpis, id scelerisque nisi.</p>
+                    <p>Praesent eu metus vel elit facilisis volutpat. Cras bibendum ultrices ante, at dictum nulla convallis quis. Sed tincidunt nulla at neque efficitur, sit amet volutpat magna porta.</p>
+                    <div class="author-links">
+                        <a href="#"><i class="fas fa-globe"></i> Sitio web</a>
+                        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <h2>Reseñas de Lectores</h2>
+            <div class="review-summary">
+                <div class="average-rating">
+                    <span class="big-rating">4.5</span>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span>128 reseñas</span>
+                </div>
+                <div class="rating-bars">
+                    <div class="rating-bar">
+                        <span>5 estrellas</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 80%;"></div>
+                        </div>
+                        <span>80%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>4 estrellas</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 12%;"></div>
+                        </div>
+                        <span>12%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>3 estrellas</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 5%;"></div>
+                        </div>
+                        <span>5%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>2 estrellas</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 2%;"></div>
+                        </div>
+                        <span>2%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>1 estrella</span>
+                        <div class="bar-container">
+                            <div class="bar" style="width: 1%;"></div>
+                        </div>
+                        <span>1%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-reviews">
+                <!-- Reseña 1 -->
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <img src="../assets/img/users/user1.jpg" alt="Usuario 1">
+                        <div>
+                            <h4>María Rodríguez</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="review-date">12 de febrero de 2023</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>Un libro fascinante. La narrativa es fluida y los personajes están muy bien desarrollados. Lo recomiendo totalmente para los amantes de este género.</p>
+                    </div>
+                </div>
+
+                <!-- Reseña 2 -->
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <img src="../assets/img/users/user2.jpg" alt="Usuario 2">
+                        <div>
+                            <h4>Carlos González</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star
